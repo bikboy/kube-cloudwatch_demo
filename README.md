@@ -15,7 +15,7 @@ For such task we definetely will use kubernetes and fluentd as log shipper ( htt
 docker build . -t timber/fluentd-cloudwatch
 docker push timber/fluentd-cloudwatch
 ```
-* edit fluentd-aws-secret.yaml file with proper AWS key and secret:
+* edit fluentd-aws-secret.yaml file with proper AWS key and secret encoded in base64 format (echo key_id | base64):
 ```
 ...
 data:
